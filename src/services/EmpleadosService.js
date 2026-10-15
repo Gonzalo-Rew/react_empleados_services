@@ -13,7 +13,7 @@ export default class EmpleadosService {
     }
 
     getEmpleadosByOficio(oficio) {
-        var request = "/api/Empleados/Empleados Oficio/" + oficio;
+        var request = "/api/Empleados/EmpleadosOficio/" + encodeURIComponent(oficio);
         var url = Global.urlEmpleados + request;
         return new Promise(function(resolve){
             axios.get(url).then(res => {
